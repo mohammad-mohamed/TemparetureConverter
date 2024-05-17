@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
 
         const celsiusInput = document.getElementById('celsius');
-        const fahrenheitInput = document.getElementById('fahrenheit');
+        // const fahrenheitInput = document.getElementById('fahrenheit');
 
         const celsius = parseFloat(celsiusInput.value);
-        const fahrenheit = parseFloat(fahrenheitInput.value);
+        // const fahrenheit = parseFloat(fahrenheitInput.value);
 
-        if (isNaN(celsius) || isNaN(fahrenheit)) {
+        if (isNaN(celsius)) {
             resultDiv.textContent = 'Please enter valid temperatures.';
             return;
         }
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const fahrenheitResult = (celsius * 9/5) + 32;
         resultDiv.textContent += `Celsius to Fahrenheit: ${fahrenheitResult.toFixed(2)}°F`;
 
-        const celsiusResult = (fahrenheit - 32) * 5/9;
-        resultDiv.textContent += ` | Fahrenheit to Celsius: ${celsiusResult.toFixed(2)}°C`;
+        // const celsiusResult = (fahrenheit - 32) * 5/9;
+        // resultDiv.textContent += ` | Fahrenheit to Celsius: ${celsiusResult.toFixed(2)}°C`;
     });
 });
